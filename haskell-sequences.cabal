@@ -1,0 +1,35 @@
+name:                haskell-sequences
+version:             0.1.0.0
+synopsis:            Initial project template from stack
+description:         Please see README.md
+homepage:            https://github.com/alexandertar/haskell-sequences#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Alexander Taraymovich
+maintainer:          taraymovich@me.com
+copyright:           Copyright: (c) 2016 Alexander Taraymovich
+category:            Misc
+build-type:          Simple
+-- extra-source-files:
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Sequences.Data.KeyPad
+                     , Sequences.Recursive.PathFinder
+                     , Sequences.DP.PathFinder
+  build-depends:       base >= 4.7 && < 5
+                     , memoize
+  default-language:    Haskell2010
+
+executable pathfinder
+  hs-source-dirs:      app
+  main-is:             Main.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , haskell-sequences
+  default-language:    Haskell2010
+
+source-repository head
+  type:     git
+  location: https://github.com/alexandertar/haskell-sequences
