@@ -24,7 +24,7 @@ data Options = Options {
   } deriving Show
 
 defaultOptions = Options {
-    optMode  = 1
+    optMode  = 2
   , optLength = 17
   , optVowels = 2
   }
